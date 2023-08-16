@@ -32,7 +32,7 @@ function [distance, varargout] = DistBetween2Segment(p1, p2, p3, p4)
     sD = D;
     tD = D;
     
-    SMALL_NUM = 0.00000001;
+    SMALL_NUM = 0.00000001; %Very small Number
     
     % compute the line parameters of the two closest points
     if (D < SMALL_NUM)  % the lines are almost parallel

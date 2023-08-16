@@ -1,5 +1,5 @@
 function [collision,seg_idx] = collisionSeg(seg,meshpoint,radius,grid_s,grid_m)
-% Check whether segment 'seg' intersects with 'meshpoint'
+% Check whether segment 'seg' intersects with 'meshpoint' on the Sac
 % Input:
 %   seg: 2x3 matrix.
 %   meshpoint: mx3 matrix.

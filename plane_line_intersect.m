@@ -24,19 +24,12 @@ function [I,check]=plane_line_intersect(n,V0,P0,P1)
 %P1=[1 2 3]   
 % [I,check]=plane_line_intersect([1 1 1],[1 1 -5],[-5 1 -1],[1 2 3]);
 
-%This function is written by :
-%                             Nassim Khaled
-%                             Wayne State University
-%                             Research Assistant and Phd candidate
-%If you have any comments or face any problems, please feel free to leave
-%your comments and i will try to reply to you as fast as possible.
-
 I=[0 0 0];
 u = P1-P0;
 w = P0 - V0;
 D = dot(n,u);
 N = -dot(n,w);
-check=0;
+check=0; 
 if abs(D) < 10^-7        % The segment is parallel to plane
         if N == 0           % The segment lies in plane
             check=2;

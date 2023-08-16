@@ -9,7 +9,7 @@ function [new_seg] = SegmentRotation(seg,p,V,F,tri_idx,radius,epsilon)
 %   tri_idx: integer. The index of the triangle.
 %   epsilon: distance needed between the segment and the triangle.
 % Output:
-%   new_seg: 2*3 matrix. Each row is an end point.
+%   new_seg: 2*3 matrix. Each row is an end point. 
 
 tri = [V(F(tri_idx,1),:);V(F(tri_idx,2),:);V(F(tri_idx,3),:)];
 n1 = cross(tri(1,:)-tri(2,:),tri(1,:)-tri(3,:));
@@ -17,8 +17,9 @@ n2 = cross(seg(1,:)-seg(2,:),seg(1,:)-p);
 n1 = n1/norm(n1);
 n2 = n2/norm(n2);
 
+% Determines Direction to rotate coil
 if (seg(2,:)-tri(1,:))*n1'<0
-    n1 = -n1;
+    n1 = -n1; 
 end
 
 for ii = 1:3
@@ -35,7 +36,7 @@ by = (n2(1)*con1 - n1(1)*con2)/(n2(1)*n1(2) - n1(1)*n2(2));
 
 bx = bx - seg(2,1);
 by = by - seg(2,2);
-R = norm(seg(2,:) - seg(1,:));
+R = norm(seg(2,:) - seg(1,:)); 
 
 a = ax^2 + ay^2 + 1;
 b = 2*ax*bx + 2*ay*by - 2*seg(2,3);

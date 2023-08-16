@@ -1,4 +1,5 @@
 function [meshpoint]=smoothing_pp(coil_r,coils)
+    % This function smmoths by sub-dividing the segment in nodes segments and smooths the curve
 nodes=30;
 meshpoint=coil_r;
 meshpoint=meshpoint(:,1:3);

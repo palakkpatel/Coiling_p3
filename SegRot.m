@@ -15,7 +15,7 @@ R(:,1)=[c+u(1)*u(1)*c1; u(1)*u(2)*c1+u(3)*s; u(1)*u(3)*c1-u(2)*s];
 R(:,2)=[u(1)*u(2)*c1-u(3)*s; c+u(2)*u(2)*c1; u(2)*u(3)*c1+u(1)*s];
 R(:,3)=[u(1)*u(3)*c1+u(2)*s; u(2)*u(3)*c1-u(1)*s; c+u(3)*u(3)*c1];
 
-%% Rot segment
+%% Rot segment using the calculated Rotation Matrix
 b1=b*R';
 t1_new= t2 + b1;
 

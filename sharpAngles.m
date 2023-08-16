@@ -1,5 +1,5 @@
 function [a_d] = sharpAngles(meshpoint, preshape)
-% compute the bending energy of the coil
+% compute the bending energy of the coil by computing change in angles
 % Input:
 %   meshpoint: n*3 matrix, each row is a vertex of the coil.
 %   preshape: n*3 matrix, each row is a vertex of the preshape.
@@ -17,6 +17,7 @@ cosa = zeros(size(meshpoint,1),1);
 tana = zeros(size(meshpoint,1),1);
 sinp = zeros(size(meshpoint,1),1); % sin(phi) of preshape
 cosp = zeros(size(meshpoint,1),1); % cos(phi) of preshape
+
 for ii = 2:len-1
     m1 = meshpoint(ii-1,:)-meshpoint(ii,:);
     m2 = meshpoint(ii+1,:)-meshpoint(ii,:);

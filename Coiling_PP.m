@@ -7,7 +7,7 @@ No =1;
 coils = cell(No,1);
 idx_coil=0;
 idx_coil = 1;
-coordinates=load('CJA_coilpreshape.txt');
+coordinates=load('CJA_coilpreshape.txt'); % Name of the Preshape
 %load('./deployment_rob/new_preshape/SML/6x15.mat');
 coils{idx_coil} = coordinates;
 % idx_coil = idx_coil + 1;
@@ -30,7 +30,7 @@ coils{idx_coil} = coordinates;
 % load IA Sac geometry
 % load('WSN_Sac.mat');
 %load('./deployment_rob/new_preshape/LKC_Sac.mat');
-[fout,vout]=stlread('CJA_Final_sac.stl');
+[fout,vout]=stlread('CJA_Final_sac.stl'); %Name of the Aneursym SAC. (Stl File)
 mid_vout=mean(vout);
 % user input: starting point and starting direction
 starting_point = [mid_vout;mid_vout;mid_vout;mid_vout];% moslty centriod of IA Sac

@@ -14,7 +14,7 @@ dis = norm(seg(1,:)-seg(2,:))+epsilon;
 
 for ii = 1:n_tri
     tri = [V(F(ii,1),:);V(F(ii,2),:);V(F(ii,3),:)];
-    if norm(tri(1,:)-seg(1,:))>2*dis && norm(tri(2,:)-seg(1,:))>2*dis ...
+    if norm(tri(1,:)-seg(1,:)) > 2*dis && norm(tri(2,:)-seg(1,:))>2*dis ...
             && norm(tri(3,:)-seg(1,:))>2*dis
         continue;
     end

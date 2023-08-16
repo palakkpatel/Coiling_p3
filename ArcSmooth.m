@@ -1,4 +1,5 @@
 function [curve]=ArcSmooth(p1,q1,r1,nodes)
+% Smoothing the Arcs. That is the bend between two segments
     pr=r1-p1;
     qp=p1-q1;
     qr=r1-q1;

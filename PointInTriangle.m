@@ -1,5 +1,5 @@
 function [ret] = PointInTriangle(p,tri, radius)
-%% check whether point p lies in triangle tri.
+%% check whether point p lies in triangle tri of mesh
 % Input:
 %   p: 1*3 vector.
 %   tri: 3*3 matrix. Each row is a point.
@@ -31,7 +31,7 @@ p1 = tri(1,:)+p1*n;
 p2 = tri(1,:)+p2*n;
 e1 = tri(3,:)-p1;
 e2 = p-p2;
-if e1*e2'<0 && norm(e2)>radius
+if e1*e2'< 0 && norm(e2) > radius
     ret = 0;
 end
 

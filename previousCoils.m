@@ -1,5 +1,5 @@
 function [help_t, cnt_t] = previousCoils(meshpoint,grid_location)
-% Compute the helping table for previous coils.
+% Compute the helping table for previously deployed coils.
 % This table helps when computing the collision between current coil and
 % previous coils.
 % Input:

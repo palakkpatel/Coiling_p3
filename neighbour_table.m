@@ -20,12 +20,12 @@ help_t(:,1) = temp;
 help_t(:,2) = help_t(idx,2);
 v_cnt = max(help_t(:,1));
 cnt_t = zeros(v_cnt,1);
-for ii = 1:v_cnt
-    cnt_t(ii) = size(find(help_t(:,1) == ii),1);
-end
+    for ii = 1:v_cnt
+        cnt_t(ii) = size(find(help_t(:,1) == ii),1);
+    end
 
-for ii = 2:v_cnt
-    cnt_t(ii) = cnt_t(ii-1)+cnt_t(ii);
-end
+    for ii = 2:v_cnt
+        cnt_t(ii) = cnt_t(ii-1)+cnt_t(ii);
+    end
 
 end

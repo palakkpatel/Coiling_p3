@@ -26,7 +26,7 @@ for ii = 1:n_seg-1
         sum(grid_s(2,:) == grid_m(2,:))<3
         continue;
     end
-    if norm(seg(1,:)-temp_p(ii,1:3))>4*radius
+    if norm(seg(1,:)-temp_p(ii,1:3)) > 4*radius
         continue;
     end
     if DistBetween2Segment(seg(1,:),seg(2,:),...

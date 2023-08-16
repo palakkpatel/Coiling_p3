@@ -1,5 +1,5 @@
 function [X,Y,Z,CAPS] = extrude(varargin)
-% EXTRUDE  Extrude a 2D curve along a 3D path to create
+% EXTRUDE  Extrude a 2D curve along a 3D path to create for plotting
 % tubes/cylinders/etc (and, optionally, fly though it!)
 %
 %   [X,Y,Z] = EXTRUDE(base,traj)

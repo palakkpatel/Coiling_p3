@@ -9,6 +9,7 @@ function [tri_id] = tri_neighbour(tri_idx,fout,cnt, help_t, cnt_t)
 %   cnt_t: count of the vertices in helping table.
 % Ouput:
 %   tri_id: indeces of neighbours in fout.
+
 p = fout(tri_idx,:);
 idx = zeros(3,2);
 for ii = 1:3
@@ -19,12 +20,14 @@ for ii = 1:3
     end
     idx(ii,2) = cnt_t(p(ii));
 end
+
 tri_id = [help_t(idx(1,1):idx(1,2),2);...
     help_t(idx(2,1):idx(2,2),2);...
     help_t(idx(3,1):idx(3,2),2)];
 tri_id = unique(tri_id);
 tri_cnt = size(tri_id,1);
 temp = [];
+
 while tri_cnt < cnt
     for ii = 1:tri_cnt
         p = fout(tri_id(ii),:);

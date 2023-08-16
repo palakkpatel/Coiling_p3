@@ -3,7 +3,7 @@ function [faces, vertices] = stlread(filename)
 % Input: filename is a string. It should be 'name.extention'.
 % Output:
 %   vertices: v_cnt * 3 matrix, each row is a vertex
-%   faces: f_cnt * 3 matrix. 
+%   faces: f_cnt * 3 matrix. Each row is the vertex_id of the triangluar face.
 
 % Open the file, assumes STL ASCII format.
 fid = fopen(filename, 'r');
